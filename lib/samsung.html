@@ -67,7 +67,7 @@
       }
     },
     inputs: 1,
-    outputs: 0,
+    outputs: 1,
     paletteLabel: "Samsung TV Send",
     align: "right",
     label: function() {
@@ -171,18 +171,42 @@
   <p>Returns to output pin 1 if the TV is on, 2 if not</p>
 </script>
 
+<script type="text/javascript">
+  RED.nodes.registerType("samsung-tv-token", {
+    category: "devices",
+    color: "#87E980",
+    icon: "tv.png",
+    defaults: {
+      device: {
+        type: "samsung-tv",
+        required: true
+      },
+      name: {
+        value: "",
+        required: false
+      }
+    },
+    inputs: 1,
+    outputs: 1,
+    paletteLabel: "Samsung TV Get Token",
+    align: "right",
+    label: function() {
+      return this.name ? this.name : "Samsung TV Get Token";
+    }
+  });
+</script>
 
 <script type="text/x-red" data-template-name="samsung-tv-token">
+  <div class="form-row">
+        <label for="node-input-device"><i class="fa fa-keyboard-o"></i> Device</label>
+        <input type="text" id="node-input-device">
+    </div>
     <div class="form-row">
-          <label for="node-input-device"><i class="fa fa-keyboard-o"></i> Device</label>
-          <input type="text" id="node-input-device">
-      </div>
-      <div class="form-row">
-          <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
-          <input type="text" id="node-input-name" />
-      </div>
-  </script>
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" />
+    </div>
+</script>
 
-  <script type="text/x-red" data-help-name="samsung-tv-token">
-    <p>Returns token</p>
-  </script>
+<script type="text/x-red" data-help-name="samsung-tv-token">
+  <p>Returns token</p>
+</script>

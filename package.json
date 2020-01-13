@@ -1,5 +1,5 @@
 {
-  "name": "red-contrib-samsung-tv-control",
+  "name": "node-red-contrib-samsung-tv-control",
   "version": "1.0.0",
   "description": "Node-Red plugin for samsung tv control",
   "main": "index.js",
