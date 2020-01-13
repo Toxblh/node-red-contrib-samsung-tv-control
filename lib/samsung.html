@@ -1,0 +1,188 @@
+<script type="text/javascript">
+  RED.nodes.registerType("samsung-tv", {
+    category: "config",
+    defaults: {
+      name: {
+        value: "",
+        required: false
+      },
+      ip: {
+        value: "",
+        required: true
+      },
+      mac: {
+        value: "",
+        required: true
+      },
+      token: {
+        value: "",
+        required: false
+      }
+    },
+    label: function() {
+      return this.name ? this.name : "Samsung TV";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="samsung-tv">
+  <div class="form-row">
+        <label for="node-config-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-config-input-name" />
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-ip"><i class="fa fa-globe"></i> IP</label>
+        <input type="text" id="node-config-input-ip" placeholder="192.168.0.1" />
+    </div>
+    <div class="form-row">
+      <label for="node-config-input-mac"><i class="fa fa-globe"></i> MAC Address</label>
+      <input type="text" id="node-config-input-mac" placeholder="641CAE4422EE" />
+    </div>
+    <div class="form-row">
+      <label for="node-config-input-token"><i class="fa fa-globe"></i> Token</label>
+      <input type="text" id="node-config-input-token" placeholder="123456789abcdef" />
+    </div>
+    <div class="form-tips">
+      <p>You need to configure the IP address & app token of the Samsung TV here.</p>
+    </div>
+</script>
+
+<script type="text/javascript">
+  RED.nodes.registerType("samsung-tv-send", {
+    category: "devices",
+    color: "#87E980",
+    icon: "tv.png",
+    defaults: {
+      device: {
+        type: "samsung-tv",
+        required: true
+      },
+      name: {
+        value: "",
+        required: false
+      },
+      key: {
+        value: "",
+        required: false
+      }
+    },
+    inputs: 1,
+    outputs: 0,
+    paletteLabel: "Samsung TV Send",
+    align: "right",
+    label: function() {
+      return this.key ? "TV key:" + this.key : "Samsung TV Send";
+    },
+    oneditprepare: function() {
+      var valueKey = $("#node-input-key").val();
+
+      $("#node-input-key").replaceWith(
+        '<select id="node-input-key" name="node-input-key" style="width: 250px;">'
+      );
+
+      $("#node-input-key")
+        .find("option")
+        .remove();
+
+      $.ajax({
+        url: "samsungtv/keys",
+        success: function(data) {
+          const keys = Object.keys(JSON.parse(data));
+
+          for (var i = 0; i < keys.length; i++) {
+            $("#node-input-key")
+              .find("option")
+              .end()
+              .append(
+                '<option value="' + keys[i] + '">' + keys[i] + "</option>"
+              );
+          }
+
+          $("#node-input-key").val(valueKey);
+        }
+      });
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="samsung-tv-send">
+  <div class="form-row">
+        <label for="node-input-device"><i class="fa fa-keyboard-o"></i> Device</label>
+        <input type="text" id="node-input-device">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" />
+    </div>
+    <div class="form-row">
+        <label for="node-input-key"><i class="fa fa-tasks"></i> Key</label>
+        <input type="text" id="node-input-key" style="!important">
+    </div>
+    <div class="form-tips" id="node-input-key" style="margin-top:5px margin-bottom:5px">
+        <div>
+          Select a reference node to write the payload to.
+        </div>
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="samsung-tv-send">
+  <p>Sends keys to Samsung network connected TVs</p>
+   <p>Select the key to send in the node settings or the msg.payload.</p>
+</script>
+
+<script type="text/javascript">
+  RED.nodes.registerType("samsung-tv-isalive", {
+    category: "devices",
+    color: "#87E980",
+    icon: "tv.png",
+    defaults: {
+      device: {
+        type: "samsung-tv",
+        required: true
+      },
+      name: {
+        value: "",
+        required: false
+      }
+    },
+    inputs: 1,
+    outputs: 2,
+    outputLabels: ["on", "off"],
+    paletteLabel: "Samsung TV Is Alive",
+    align: "right",
+    label: function() {
+      return this.name ? this.name : "Samsung TV Is Alive";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="samsung-tv-isalive">
+  <div class="form-row">
+        <label for="node-input-device"><i class="fa fa-keyboard-o"></i> Device</label>
+        <input type="text" id="node-input-device">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" />
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="samsung-tv-isalive">
+  <p>Returns to output pin 1 if the TV is on, 2 if not</p>
+</script>
+
+
+<script type="text/x-red" data-template-name="samsung-tv-token">
+    <div class="form-row">
+          <label for="node-input-device"><i class="fa fa-keyboard-o"></i> Device</label>
+          <input type="text" id="node-input-device">
+      </div>
+      <div class="form-row">
+          <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+          <input type="text" id="node-input-name" />
+      </div>
+  </script>
+
+  <script type="text/x-red" data-help-name="samsung-tv-token">
+    <p>Returns token</p>
+  </script>

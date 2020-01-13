@@ -1,0 +1,33 @@
+{
+  "name": "red-contrib-samsung-tv-control",
+  "version": "1.0.0",
+  "description": "Node-Red plugin for samsung tv control",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Toxblh/node-red-contrib-samsung-tv-control.git"
+  },
+  "keywords": [
+    "samsung",
+    "tv",
+    "control",
+    "node-red"
+  ],
+  "author": "Anton Palgunov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Toxblh/node-red-contrib-samsung-tv-control/issues"
+  },
+  "homepage": "https://github.com/Toxblh/node-red-contrib-samsung-tv-control#readme",
+  "dependencies": {
+    "samsung-tv-control": "^1.5.0"
+  },
+  "node-red": {
+    "nodes": {
+      "Samsung-TV": "lib/samsung.js"
+    }
+  }
+}
