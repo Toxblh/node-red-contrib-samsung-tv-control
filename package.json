@@ -4,7 +4,7 @@
   "description": "Node-Red plugin for samsung tv control",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,12 @@
   "homepage": "https://github.com/Toxblh/node-red-contrib-samsung-tv-control#readme",
   "dependencies": {
     "samsung-tv-control": "^1.5.0"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "mocha": "^7.0.0",
+    "node-red": "^1.0.3",
+    "node-red-node-test-helper": "^0.2.3"
   },
   "node-red": {
     "nodes": {

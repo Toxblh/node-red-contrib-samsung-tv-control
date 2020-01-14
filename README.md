@@ -1,5 +1,7 @@
 node-red-contrib-samsung-tv-control
 ========================
+[![Latest Stable Version](https://img.shields.io/npm/v/node-red-contrib-samsung-tv-control.svg)](https://www.npmjs.com/package/node-red-contrib-samsung-tv-control) [![Downloads total](https://img.shields.io/npm/dt/node-red-contrib-samsung-tv-control.svg)](https://www.npmjs.com/package/node-red-contrib-samsung-tv-control) [![Downloads month](https://img.shields.io/npm/dm/node-red-contrib-samsung-tv-control.svg)](https://www.npmjs.com/package/node-red-contrib-samsung-tv-control) [![License](https://img.shields.io/npm/l/node-red-contrib-samsung-tv-control.svg)](https://www.npmjs.com/package/node-red-contrib-samsung-tv-control)
+
 The plugin for <a href="http://nodered.org" target="_new">Node-RED</a> for control your samsung TV!
 
 Now it should work on models after 2017 year. I tested it on my UE43NU7400 TV.
@@ -32,6 +34,5 @@ Usage
 Roadmap
 ------
 
-- [ ] Showing list of TV apps and opening TV apps
 - [ ] Supporting previous version of Samsung TVs
 - [ ] Polishing by guildlines from NodeRED for the node
