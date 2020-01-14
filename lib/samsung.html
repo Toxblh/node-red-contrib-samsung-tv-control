@@ -231,7 +231,7 @@
         value: '',
         required: false
       },
-      appId: {
+      appid: {
         value: '',
         required: false
       }
@@ -241,16 +241,16 @@
     paletteLabel: 'Samsung TV Open App',
     align: 'right',
     label: function () {
-      return this.appId ? 'AppId:' + this.appId : 'Samsung TV Open App'
+      return this.appid ? 'AppId:' + this.appid : 'Samsung TV Open App'
     },
     oneditprepare: function () {
-      var valueAppId = $('#node-input-app-id').val()
+      var valueAppId = $('#node-input-appid').val()
 
-      $('#node-input-app-id').replaceWith(
-        '<select id="node-input-app-id" name="node-input-app-id" style="width: 250px;">'
+      $('#node-input-appid').replaceWith(
+        '<select id="node-input-appid" name="node-input-appid" style="width: 250px;">'
       )
 
-      $('#node-input-app-id')
+      $('#node-input-appid')
         .find('option')
         .remove()
 
@@ -261,13 +261,13 @@
           const appsKeys = Object.keys(apps)
 
           for (var i = 0; i < appsKeys.length; i++) {
-            $('#node-input-app-id')
+            $('#node-input-appid')
               .find('option')
               .end()
               .append('<option value="' + apps[appsKeys[i]] + '">' + appsKeys[i] + '</option>')
           }
 
-          $('#node-input-app-id').val(valueAppId)
+          $('#node-input-appid').val(valueAppId)
         }
       })
     }
@@ -284,10 +284,10 @@
     <input type="text" id="node-input-name" />
   </div>
   <div class="form-row">
-    <label for="node-input-app-id"><i class="fa fa-tasks"></i> AppId</label>
-    <input type="text" id="node-input-app-id" style="!important" />
+    <label for="node-input-appid"><i class="fa fa-tasks"></i> AppId</label>
+    <input type="text" id="node-input-appid" style="!important" />
   </div>
-  <div class="form-tips" id="node-input-app-id" style="margin-top:5px margin-bottom:5px">
+  <div class="form-tips" id="node-input-appid" style="margin-top:5px margin-bottom:5px">
     <div>
       Select a reference node to write the payload to.
     </div>
