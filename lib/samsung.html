@@ -244,13 +244,13 @@
       return this.appId ? 'AppId:' + this.appId : 'Samsung TV Open App'
     },
     oneditprepare: function () {
-      var valueAppId = $('#node-input-appId').val()
+      var valueAppId = $('#node-input-app-id').val()
 
-      $('#node-input-appId').replaceWith(
-        '<select id="node-input-appId" name="node-input-appId" style="width: 250px;">'
+      $('#node-input-app-id').replaceWith(
+        '<select id="node-input-app-id" name="node-input-app-id" style="width: 250px;">'
       )
 
-      $('#node-input-appId')
+      $('#node-input-app-id')
         .find('option')
         .remove()
 
@@ -261,13 +261,13 @@
           const appsKeys = Object.keys(apps)
 
           for (var i = 0; i < appsKeys.length; i++) {
-            $('#node-input-appId')
+            $('#node-input-app-id')
               .find('option')
               .end()
               .append('<option value="' + apps[appsKeys[i]] + '">' + appsKeys[i] + '</option>')
           }
 
-          $('#node-input-appId').val(valueAppId)
+          $('#node-input-app-id').val(valueAppId)
         }
       })
     }
@@ -284,10 +284,10 @@
     <input type="text" id="node-input-name" />
   </div>
   <div class="form-row">
-    <label for="node-input-key"><i class="fa fa-tasks"></i> AppId</label>
-    <input type="text" id="node-input-key" style="!important" />
+    <label for="node-input-app-id"><i class="fa fa-tasks"></i> AppId</label>
+    <input type="text" id="node-input-app-id" style="!important" />
   </div>
-  <div class="form-tips" id="node-input-key" style="margin-top:5px margin-bottom:5px">
+  <div class="form-tips" id="node-input-app-id" style="margin-top:5px margin-bottom:5px">
     <div>
       Select a reference node to write the payload to.
     </div>
