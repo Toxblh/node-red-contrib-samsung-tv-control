@@ -6,6 +6,8 @@ The plugin for <a href="http://nodered.org" target="_new">Node-RED</a> for contr
 
 Now it should work on models after 2017 year. I tested it on my UE43NU7400 TV.
 
+For TV 2016 year you shuold set "TV 2016 (8001 port)" model in config
+
 Install
 -------
 Find in Manage palette -> Install -> `node-red-contrib-samsung-tv-control`

@@ -6,6 +6,10 @@
         value: '',
         required: false
       },
+      model: {
+        value: '',
+        required: true
+      },
       ip: {
         value: '',
         required: true
@@ -21,6 +25,23 @@
     },
     label: function () {
       return this.name ? this.name : 'Samsung TV'
+    },
+    oneditprepare: function () {
+      var valueModel = $('#node-config-input-model').val()
+
+      $('#node-config-input-model').replaceWith(
+        '<select id="node-config-input-model" name="node-config-input-model" style="width: 250px;">'
+      )
+
+      $('#node-config-input-model')
+        .find('option')
+        .remove()
+        .end()
+        .append('<option value="8002">TV 2017+ (8002 port)</option>')
+        .append('<option value="8001">TV 2016 (8001 port)</option>')
+        .append('<option disabled value="55000">[Soon] Before 2016 (55000 port)</option>')
+
+      $('#node-config-input-model').val(valueModel)
     }
   })
 </script>
@@ -29,6 +50,10 @@
   <div class="form-row">
     <label for="node-config-input-name"><i class="fa fa-tag"></i> Name</label>
     <input type="text" id="node-config-input-name" />
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-model"><i class="fa fa-globe"></i> IP</label>
+    <input type="text" id="node-config-input-model" placeholder="modern" />
   </div>
   <div class="form-row">
     <label for="node-config-input-ip"><i class="fa fa-globe"></i> IP</label>
