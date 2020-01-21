@@ -49,4 +49,4 @@ The project was developed with ♥ save you (for sure) a lot of time and help yo
 
 You can also fund specific issues via Issuehunt. That can boost the development of a feature you need and make it more attractive for contributors.
 
-[![Issuehunt](https://raw.githubusercontent.com/toxblh/node-red-contrib-samsung-tv-control/master/static/issuehunt-button.png)](https://issuehunt.io/r/Toxblh/node-red-contrib-samsung-tv-control)
+[![Issuehunt](https://raw.githubusercontent.com/Toxblh/node-red-contrib-samsung-tv-control/master/issuehunt-button.png)](https://issuehunt.io/r/Toxblh/node-red-contrib-samsung-tv-control)
