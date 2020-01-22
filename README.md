@@ -1,6 +1,7 @@
 node-red-contrib-samsung-tv-control
 ========================
-[![Latest Stable Version](https://img.shields.io/npm/v/node-red-contrib-samsung-tv-control.svg)](https://www.npmjs.com/package/node-red-contrib-samsung-tv-control) [![Downloads total](https://img.shields.io/npm/dt/node-red-contrib-samsung-tv-control.svg)](https://www.npmjs.com/package/node-red-contrib-samsung-tv-control) [![Downloads month](https://img.shields.io/npm/dm/node-red-contrib-samsung-tv-control.svg)](https://www.npmjs.com/package/node-red-contrib-samsung-tv-control) [![License](https://img.shields.io/npm/l/node-red-contrib-samsung-tv-control.svg)](https://www.npmjs.com/package/node-red-contrib-samsung-tv-control)
+[![Latest Stable Version](https://img.shields.io/npm/v/node-red-contrib-samsung-tv-control.svg)](https://www.npmjs.com/package/node-red-contrib-samsung-tv-control) [![Downloads total](https://img.shields.io/npm/dt/node-red-contrib-samsung-tv-control.svg)](https://www.npmjs.com/package/node-red-contrib-samsung-tv-control) [![Downloads month](https://img.shields.io/npm/dm/node-red-contrib-samsung-tv-control.svg)](https://www.npmjs.com/package/node-red-contrib-samsung-tv-control) [![License](https://img.shields.io/npm/l/node-red-contrib-samsung-tv-control.svg)](https://www.npmjs.com/package/node-red-contrib-samsung-tv-control) [![Paypal Donate](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WUAAG2HH58WE4) [![Patreon](https://img.shields.io/badge/patreon-support-blue.svg)](https://www.patreon.com/toxblh)
+
 
 The plugin for <a href="http://nodered.org" target="_new">Node-RED</a> for control your samsung TV!
 
@@ -38,3 +39,14 @@ Roadmap
 
 - [ ] Supporting previous version of Samsung TVs
 - [ ] Polishing by guildlines from NodeRED for the node
+
+## Donate and Support
+
+The project was developed with ♥ save you (for sure) a lot of time and help you to increase your productivity so, please consider a [donation](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WUAAG2HH58WE4) or become a [supporter](https://www.patreon.com/toxblh) and help to become more awesome than ever.
+
+[![Patreon](https://img.shields.io/badge/patreon-support-blue.svg?style=for-the-badge&logo=patreon)](https://www.patreon.com/toxblh)
+[![Paypal Donate](https://img.shields.io/badge/paypal-donate-blue.svg?style=for-the-badge&logo=paypal)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WUAAG2HH58WE4)
+
+You can also fund specific issues via Issuehunt. That can boost the development of a feature you need and make it more attractive for contributors.
+
+[![Issuehunt](https://raw.githubusercontent.com/Toxblh/node-red-contrib-samsung-tv-control/master/issuehunt-button.png)](https://issuehunt.io/r/Toxblh/node-red-contrib-samsung-tv-control)
