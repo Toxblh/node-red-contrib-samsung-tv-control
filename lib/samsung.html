@@ -158,6 +158,66 @@
    <p>Select the key to send in the node settings or the msg.payload.</p>
 </script>
 
+
+<!-- SEND Channel -->
+
+<script type="text/javascript">
+  RED.nodes.registerType('samsung-tv-sendchannel', {
+    category: 'devices',
+    color: '#87E980',
+    icon: 'tv.png',
+    defaults: {
+      device: {
+        type: 'samsung-tv',
+        required: true
+      },
+      name: {
+        value: '',
+        required: false
+      },
+      keys: {
+        value: '',
+        required: false
+      }
+    },
+    inputs: 1,
+    outputs: 1,
+    paletteLabel: 'Samsung TV Send Channel',
+    align: 'right',
+    label: function () {
+      if (!this.name) {
+        return this.keys ? 'Channel :' + this.keys : 'Samsung TV Send Channel'
+      }
+      return this.name
+    },
+  })
+</script>
+
+<script type="text/html" data-template-name="samsung-tv-sendchannel">
+  <div class="form-row">
+    <label for="node-input-device"><i class="fa fa-keyboard-o"></i> Device</label>
+    <input type="text" id="node-input-device" />
+  </div>
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+    <input type="text" id="node-input-name" />
+  </div>
+  <div class="form-row">
+    <label for="node-input-keys"><i class="fa fa-tasks"></i> Keys</label>
+    <input type="text" id="node-input-keys" style="!important" />
+  </div>
+  <div class="form-tips" id="node-input-keys" style="margin-top:5px margin-bottom:5px">
+    <div>
+      Write which channel need to open like 25
+    </div>
+  </div>
+</script>
+
+<script type="text/html" data-help-name="samsung-tv-sendchannel">
+  <p>Sends keys to Samsung network connected TVs</p>
+   <p>Select the key to send in the node settings or the msg.payload.</p>
+</script>
+
 <!-- isAlive -->
 
 <script type="text/javascript">
