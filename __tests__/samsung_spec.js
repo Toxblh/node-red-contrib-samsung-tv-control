@@ -8,12 +8,14 @@ describe('Samsung-tv Node', function () {
 
   it.each`
     type
-    ${'samsung-tv-send'}
-    ${'samsung-tv-isalive'}
-    ${'samsung-tv-token'}
-    ${'samsung-tv-turnon'}
-    ${'samsung-tv-openapp'}
-    ${'samsung-tv-getapps'}
+      ${'samsung-tv-send'}
+      ${'samsung-tv-sendchannel'}
+      ${'samsung-tv-isalive'}
+      ${'samsung-tv-isaliveping'}
+      ${'samsung-tv-token'}
+      ${'samsung-tv-turnon'}
+      ${'samsung-tv-openapp'}
+      ${'samsung-tv-getapps'}
   `('should be loaded $type', function({ type }, done) {
     var flow = [{ id: 'n1', type, name: 'test name' }]
     helper.load(samsung, flow, function() {
