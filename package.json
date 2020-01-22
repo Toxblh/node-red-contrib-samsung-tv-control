@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/Toxblh/node-red-contrib-samsung-tv-control#readme",
   "dependencies": {
-    "samsung-tv-control": "^1.7.1"
+    "samsung-tv-control": "^1.7.2"
   },
   "devDependencies": {
     "jest": "^25.1.0",
