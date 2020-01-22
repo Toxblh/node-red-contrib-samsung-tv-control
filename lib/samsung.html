@@ -98,7 +98,10 @@
     paletteLabel: 'Samsung TV Send',
     align: 'right',
     label: function () {
-      return this.key ? 'TV key:' + this.key : 'Samsung TV Send'
+      if (!this.name) {
+        return this.key ? 'TV key:' + this.key : 'Samsung TV Send'
+      }
+      return this.name
     },
     oneditprepare: function () {
       var valueKey = $('#node-input-key').val()
@@ -198,6 +201,49 @@
   <p>Returns to output pin 1 if the TV is on, 2 if not</p>
 </script>
 
+<!-- isAlivePing -->
+
+<script type="text/javascript">
+  RED.nodes.registerType('samsung-tv-isaliveping', {
+    category: 'devices',
+    color: '#87E980',
+    icon: 'tv.png',
+    defaults: {
+      device: {
+        type: 'samsung-tv',
+        required: true
+      },
+      name: {
+        value: '',
+        required: false
+      }
+    },
+    inputs: 1,
+    outputs: 2,
+    outputLabels: ['on', 'off'],
+    paletteLabel: 'Samsung TV Is Alive via Ping',
+    align: 'right',
+    label: function () {
+      return this.name ? this.name : 'Samsung TV Is Alive'
+    }
+  })
+</script>
+
+<script type="text/html" data-template-name="samsung-tv-isaliveping">
+  <div class="form-row">
+    <label for="node-input-device"><i class="fa fa-keyboard-o"></i> Device</label>
+    <input type="text" id="node-input-device" />
+  </div>
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+    <input type="text" id="node-input-name" />
+  </div>
+</script>
+
+<script type="text/html" data-help-name="samsung-tv-isaliveping">
+  <p>Returns to output pin 1 if the TV is on, 2 if not</p>
+</script>
+
 <!-- TOKEN -->
 
 <script type="text/javascript">
@@ -266,7 +312,10 @@
     paletteLabel: 'Samsung TV Open App',
     align: 'right',
     label: function () {
-      return this.appid ? 'AppId:' + this.appid : 'Samsung TV Open App'
+      if (!this.name) {
+        return this.appid ? 'AppId:' + this.appid : 'Samsung TV Open App'
+      }
+      return this.name
     },
     oneditprepare: function () {
       var valueAppId = $('#node-input-appid').val()
