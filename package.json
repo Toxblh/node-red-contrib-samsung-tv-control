@@ -4,7 +4,10 @@
   "description": "Node-Red plugin for samsung tv control",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "patch": "npm version patch && git push",
+    "minor": "npm version minor && git push",
+    "major": "npm version major && git push"
   },
   "repository": {
     "type": "git",
