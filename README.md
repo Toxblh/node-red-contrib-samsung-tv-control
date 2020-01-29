@@ -2,6 +2,7 @@ node-red-contrib-samsung-tv-control
 ========================
 [![Latest Stable Version](https://img.shields.io/npm/v/node-red-contrib-samsung-tv-control.svg)](https://www.npmjs.com/package/node-red-contrib-samsung-tv-control) [![Downloads total](https://img.shields.io/npm/dt/node-red-contrib-samsung-tv-control.svg)](https://www.npmjs.com/package/node-red-contrib-samsung-tv-control) [![Downloads month](https://img.shields.io/npm/dm/node-red-contrib-samsung-tv-control.svg)](https://www.npmjs.com/package/node-red-contrib-samsung-tv-control) [![License](https://img.shields.io/npm/l/node-red-contrib-samsung-tv-control.svg)](https://www.npmjs.com/package/node-red-contrib-samsung-tv-control) [![Paypal Donate](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WUAAG2HH58WE4) [![Patreon](https://img.shields.io/badge/patreon-support-blue.svg)](https://www.patreon.com/toxblh)
 
+[🇷🇺 🐙 Инструкция на русском [sprut.ai]](https://sprut.ai/client/plugins/instruction/2295)
 
 The plugin for <a href="http://nodered.org" target="_new">Node-RED</a> for control your samsung TV!
 
