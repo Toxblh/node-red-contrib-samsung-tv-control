@@ -6,13 +6,13 @@ node-red-contrib-samsung-tv-control
 
 The plugin for <a href="http://nodered.org" target="_new">Node-RED</a> for control your samsung TV!
 
-Now it should work on models after 2017 year. I tested it on my UE43NU7400 TV.
+Now it should work on models produced after 2017. I tested it on my UE43NU7400 TV.
 
-For TV 2016 year you shuold set "TV 2016 (8001 port)" model in config
+For TVs produced in 2016, you should set "TV 2016 (8001 port)" model in config
 
 Install
 -------
-Find in Manage palette -> Install -> `node-red-contrib-samsung-tv-control`
+Find the plugin in Manage palette -> Install -> `node-red-contrib-samsung-tv-control`
 
 Or
 
@@ -20,20 +20,22 @@ Run command on Node-RED installation directory `npm install node-red-contrib-sam
 
 Usage
 ------
-- Drag an drop any node
+- Drag and drop any node
 
 ![image](https://user-images.githubusercontent.com/2198153/72253254-0679dd00-35f9-11ea-87a1-8fc130dec58f.png)
 
-- Set IP and Mac address of the TV (You can find it in your Wifi Router)
+- Set IP and Mac address of the TV (You can find it in your Wifi Router, or via [the network status menu, see these steps on samsung support](https://www.samsung.com/au/support/tv-audio-video/connect-tv-to-internet/))
 
 ![image](https://user-images.githubusercontent.com/2198153/72253663-f57d9b80-35f9-11ea-839c-8bd9b0169193.png)
 ![image](https://user-images.githubusercontent.com/2198153/72253230-f8c45780-35f8-11ea-8305-47cba43960a0.png)
 
-- Grab your token first time and keep in the TV settings
+- Your TV may show a dialog, requesting permission for remote control. If you confirm this dialog, the TV will send an access token back to NodeRed, and it will be displayed in the debug window. Copy & Paste your token from the debug window into the Samsung TV configuration node.
 
 ![image](https://user-images.githubusercontent.com/2198153/72253161-c9154f80-35f8-11ea-8fb5-5d2a113407a0.png)
 
 - Enjoy to use it!
+
+- to power on the tv from network, you may need to follow [these steps from samsung support](https://www.samsung.com/au/support/tv-audio-video/control-your-tv-using-the-smartthings-app/).
 
 Roadmap
 ------
