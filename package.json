@@ -30,8 +30,8 @@
   },
   "devDependencies": {
     "jest": "^25.1.0",
-    "mocha": "^7.0.0",
-    "node-red": "^1.0.3",
+    "mocha": "^7.1.1",
+    "node-red": "^1.0.4",
     "node-red-node-test-helper": "^0.2.3"
   },
   "node-red": {
