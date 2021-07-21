@@ -1,0 +1,41 @@
+kind: pipeline
+type: docker
+name: build
+
+steps:
+  - name: restore-cache
+    image: drillster/drone-volume-cache
+    volumes:
+      - name: cache
+        path: /cache
+    settings:
+      restore: true
+      mount:
+        - ./node_modules
+
+  - name: install
+    image: node:lts
+    commands:
+      - node -v
+      - npm -v
+      - npm install
+
+  - name: testing
+    image: node:lts
+    commands:
+      - npm run test -- --colors --forceExit
+
+  - name: rebuild-cache
+    image: drillster/drone-volume-cache
+    volumes:
+      - name: cache
+        path: /cache
+    settings:
+      rebuild: true
+      mount:
+        - ./node_modules
+
+volumes:
+  - name: cache
+    host:
+      path: /tmp/cache
