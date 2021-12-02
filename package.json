@@ -29,9 +29,9 @@
     "samsung-tv-control": "1.12.3"
   },
   "devDependencies": {
-    "jest": "^27.4.2",
+    "jest": "^27.4.3",
     "mocha": "^9.1.3",
-    "node-red": "^2.1.3",
+    "node-red": "^2.1.4",
     "node-red-node-test-helper": "^0.2.7"
   },
   "node-red": {
